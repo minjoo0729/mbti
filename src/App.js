@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import QuestionPage1 from './question1'; // Update the import statement
+import QuestionPage2 from './question2'; // Update the import statement
+
+import Answer from './Answer';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="main">
+        <b>MBTI</b>
+        <br />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/question1" element={<QuestionPage1 />} />
+          <Route path="/question2" element={<QuestionPage2 />} /> 
+          <Route path="/answer/:id" element={<Answer />} />
+          
+
+        </Routes>
+      </div>
+    </Router>
   );
-}
-//우아앙
+};
 export default App;
