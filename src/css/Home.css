@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html, body{
+    height: 100%;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #030321;
+    font-family: Arial;
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    align-items:center;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke: #489ED5;
+    animation-delay: -1;
+}
+.text-copy:nth-child(2){
+    stroke: #77B0DE;
+    animation-delay: -2s;
+}
+.text-copy:nth-child(3){
+    stroke: #9CC3E6;
+    animation-delay: -3s;
+}
+.text-copy:nth-child(4){
+    stroke: #C2D9F0;
+    animation-delay: -4s;
+}
+.text-copy:nth-child(5){
+    stroke: #E2EDF8;
+    animation-delay: -5s;
+}   
+.text-copy:nth-child(6){
+    stroke: #ffffff;
+    animation-delay: -6s;
+}  
+
+button{
+    margin: auto;
+    padding: 0;
+    display: block;
+}
+.custom-home{
+    width: 150px;
+    height: 43px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    margin: auto;
+    padding: 0;
+    display: block;
+}
+
+.btn-start {
+    background: #84A0D3;
+    background: linear-gradient(0deg, #84A0D3 0%, #566EA1 100%);
+    width: 150px;
+    height: 43px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    
+  }
+.btn-start span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.btn-start:before,
+.btn-start:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: #566EA1;
+    transition: all 0.3s ease;
+}
+.btn-start:before {
+    height: 0%;
+    width: 2px;
+}
+.btn-start:after {
+    width: 0%;
+    height: 2px;
+}
+.btn-start:hover{
+     background: transparent;
+    box-shadow: none;
+}
+.btn-start:hover:before {
+    height: 100%;
+}
+.btn-start:hover:after {
+    width: 100%;
+}
+.btn-start span:hover{
+     color: #566EA1;
+}
+.btn-start span:before,
+.btn-start span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: #566EA1;
+    transition: all 0.3s ease;
+}
+.btn-start span:before {
+    width: 2px;
+    height: 0%;
+}
+.btn-start span:after {
+    width: 0%;
+    height: 2px;
+}
+.btn-start span:hover:before {
+    height: 100%;
+}
+.btn-start span:hover:after {
+    width: 100%;
+}
+
+@keyframes stroke-offset{
+    100% {stroke-dashoffset: -35%;}
+}
