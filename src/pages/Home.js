@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Home.css"
+import "../css/Home.css"
 
 const Home = () => {
   const handleAnswerClick = () => {
@@ -29,7 +29,7 @@ const Home = () => {
         </svg>
       </div>
       <div>
-        <button onClick={handleAnswerClick}>Test Start</button>
+        <button class="custom-home btn-start" onClick={handleAnswerClick}><span>Test Start</span></button>
       </div>
     </>
   );

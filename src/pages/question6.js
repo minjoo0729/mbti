@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import "../css/question.css"
 
 const QuestionPage6 = () => {
   const { IE, NS, FT, PJ } = useParams();
@@ -42,22 +43,22 @@ const QuestionPage6 = () => {
       카이스트 학생들이 TV 프로그램에 나오고 있다! 나는...</p>
         <br/> <hr/> <br/>
 
-        <button onClick={handleAnswer1Click}>1.
+        <button onClick={handleAnswer1Click} class='custom-question btn-answer'>
         <p className='answer-content'>
         나도 카이스트 학생이니까 언젠가는 TV에 나갈 수 있겠지? 미리 피부관리 좀 해야겠다.</p>
         <br/></button>
-
-        <button onClick={handleAnswer2Click}>2.
+        <br/>
+        <button onClick={handleAnswer2Click} class='custom-question btn-answer'>
         <p className='answer-content'>
         만약 내가 TV에 나가면 이렇게 말해야지! 똑똑한 사람으로 이슈가 되면 재밌겠군</p>
         <br/></button>
-
-        <button onClick={handleAnswer3Click}>3.
+        <br/>
+        <button onClick={handleAnswer3Click} class='custom-question btn-answer'>
         <p className='answer-content'>
         저 친구 학교에서 본 것 같은데!</p>
         <br/></button>
-
-        <button onClick={handleAnswer4Click}>4.
+        <br/>
+        <button onClick={handleAnswer4Click} class='custom-question btn-answer'>
         <p className='answer-content'>
         오늘 내 친구가 나오는 날이니까 본방사수해야지</p>
         <br/></button>
