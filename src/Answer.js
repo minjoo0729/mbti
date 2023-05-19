@@ -1,8 +1,12 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+
 
 const Answer = ({ match }) => {
-  const { number } = match.params;
-  return <h1>You pressed {number}</h1>;
+    const { IE, NS, FT, PJ } = useParams();
+    return (
+        <h1>your result { IE } { NS } { FT } { PJ }</h1>
+    );
 };
 
 export default Answer;
