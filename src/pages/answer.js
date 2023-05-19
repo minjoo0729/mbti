@@ -1,50 +1,77 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import Result from './result/result';
 
 const Answer = () => {
   const { IE, NS, FT, PJ } = useParams();
+  console.log(useParams());
   let modifiedIE = parseInt(IE) <= 41.5 ? 'I' : 'E';
   let modifiedNS = parseInt(NS) <= 40 ? 'N' : 'S';
   let modifiedFT = parseInt(FT) <= 41.5 ? 'F' : 'T';
   let modifiedPJ = parseInt(PJ) <= 38 ? 'P' : 'J';
+  console.log(modifiedIE);
+  console.log(modifiedNS);
+  console.log(modifiedFT);
+  console.log(modifiedPJ);
+
+  let result;
+  let mbti;
+
   if (modifiedIE === 'I' && modifiedNS === 'N' && modifiedFT === 'F' && modifiedPJ === 'P') {
-    window.location.href = `/result/INFP`;
+    mbti = "INFP"
+    result = "/result/INFP";
   } else if (modifiedIE === 'I' && modifiedNS === 'N' && modifiedFT === 'F' && modifiedPJ === 'J') {
-    window.location.href = `/result/INFJ`;
+    mbti = "INFJ"
+    result = "/result/INFJ";
   } else if (modifiedIE === 'I' && modifiedNS === 'N' && modifiedFT === 'T' && modifiedPJ === 'P') {
-    window.location.href = `/result/INTP`;
+    mbti = "INTP"
+    result = "/result/INTP";
   } else if (modifiedIE === 'I' && modifiedNS === 'N' && modifiedFT === 'T' && modifiedPJ === 'J') {
-    window.location.href = `/result/INTJ`;
+    mbti = "INTJ"
+    result = "/result/INTJ";
   } else if (modifiedIE === 'I' && modifiedNS === 'S' && modifiedFT === 'F' && modifiedPJ === 'P') {
-    window.location.href = `/result/ISFP`;
+    mbti = "ISFP"
+    result = "/result/ISFP";
   } else if (modifiedIE === 'I' && modifiedNS === 'S' && modifiedFT === 'F' && modifiedPJ === 'J') {
-    window.location.href = `/result/ISFJ`;
+    mbti = "INFJ"
+    result = "/result/ISFJ";
   } else if (modifiedIE === 'I' && modifiedNS === 'S' && modifiedFT === 'T' && modifiedPJ === 'P') {
-    window.location.href = `/result/ISTP`;
+    mbti = "ISTP"
+    result = "/result/ISTP";
   } else if (modifiedIE === 'I' && modifiedNS === 'S' && modifiedFT === 'T' && modifiedPJ === 'J') {
-    window.location.href = `/result/ISTJ`;
+    mbti = "ISTJ"
+    result = "/result/ISTJ";
   } else if (modifiedIE === 'E' && modifiedNS === 'N' && modifiedFT === 'F' && modifiedPJ === 'P') {
-    window.location.href = `/result/ENFP`;
+    mbti = "ENFP"
+    result = "/result/ENFP";
   } else if (modifiedIE === 'E' && modifiedNS === 'N' && modifiedFT === 'F' && modifiedPJ === 'J') {
-    window.location.href = `/result/ENFJ`;
+    mbti = "ENFJ"
+    result = "/result/ENFJ";
   } else if (modifiedIE === 'E' && modifiedNS === 'N' && modifiedFT === 'T' && modifiedPJ === 'P') {
-    window.location.href = `/result/ENTP`;
+    mbti = "ENTP"
+    result = "/result/ENTP";
   } else if (modifiedIE === 'E' && modifiedNS === 'N' && modifiedFT === 'T' && modifiedPJ === 'J') {
-    window.location.href = `/result/ENTJ`;
+    mbti = "ENTJ"
+    result = "/result/ENTJ";
   } else if (modifiedIE === 'E' && modifiedNS === 'S' && modifiedFT === 'F' && modifiedPJ === 'P') {
-    window.location.href = `/result/ESFP`;
+    mbti = "ESFP"
+    result = "/result/ESFP";
   } else if (modifiedIE === 'E' && modifiedNS === 'S' && modifiedFT === 'F' && modifiedPJ === 'J') {
-    window.location.href = `/result/ESFJ`;
+    mbti = "ESFJ"
+    result = "/result/ESFJ";
   } else if (modifiedIE === 'E' && modifiedNS === 'S' && modifiedFT === 'T' && modifiedPJ === 'P') {
-    window.location.href = `/result/ESTP`;
+    mbti = "ESTP"
+    result = "/result/ESTP";
   } else if (modifiedIE === 'E' && modifiedNS === 'S' && modifiedFT === 'T' && modifiedPJ === 'J') {
-    window.location.href = `/result/ESTJ`;
+    mbti = "ESTJ"
+    result = "/result/ESTJ";
   }
 
   return (
     <div id="load">
         <h1>Your result: {modifiedIE} {modifiedNS} {modifiedFT} {modifiedPJ}</h1>
         <h2>result : {IE} {NS} {FT} {PJ} </h2>
+        <Result result={result} mbti = {mbti}/>
         <div>G</div>
         <div>N</div>
         <div>I</div>
