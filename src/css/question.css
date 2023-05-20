@@ -93,12 +93,12 @@ button{
     width: 0%;
     height: 2px;
 }
-.btn-answer-big:hover:before,
+.btn-answer-big:hover,
 .btn-answer:hover{
     background: transparent;
     box-shadow: none;
 }
-.btn-answer-big:hover:after,
+.btn-answer-big:hover:before,
 .btn-answer:hover:before {
     height: 100%;
 }
