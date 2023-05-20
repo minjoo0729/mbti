@@ -1,13 +1,14 @@
 import React from "react";
-import { useNavigate }  from "react-router-dom";
+
 
 const Istj = (props) => {
   return (
     <>
-    <img src="../pic/ISTJ.png" alt="ISTJ Nubjuk"/>
-    <h6>평화로운 중재자</h6>
-    <h3>Istj 넙죽</h3>
-    <p>IFNP 넙죽은 어쩌구~착하고~</p>
+    <img class="picture" height="500px" src="../pic/ISTJ.png" alt="ISTJ Nubjuk"/>
+    <h6 class="subtitle">카이스트의 청렴한 논리주의자</h6>
+    <h3>마시멜로 넙죽이</h3>
+    <p class="explanation">바쁘다 바빠 현대사회,, 그렇지만 계획과 논리는 중요해!<br/>
+    첫인상은 차가운 얼음같지만 그 속은 폭신한 마시멜로 같은 넙죽이야 :)<br/><br/><br/><br/><br/><br/><br/></p>
     </>
 
   );
